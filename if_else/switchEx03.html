@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch문 예제2</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+        color: #fff;
+        font-size: 20px;
+      }
+      p {
+        margin-top: 150px;
+        text-align: center;
+        text-shadow: 1px 2px 1px #333;
+      }
+      p strong {
+        font-size: 28px;
+        color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+       let session =prompt("관심세션을 선택해 주세요. 1-마케팅, 2-개발, 3-디자인"
+
+       );
+       switch
+       (session){
+        case "1":
+      document.write(`<p>마케팅 세션은 <strong>101호</strong>에서 진행 합니다.</P>`)
+       ;
+      break;
+      case "2":
+      document.write(`<p>개발 세션은 <strong>201호</strong>에서 진행 합니다.</P>`)
+       ;
+      break;
+      case "3":
+      document.write(`<p>디자인 세션은 <strong>301호</strong>에서 진행 합니다.</P>`)
+       ;
+      break;
+      default
+      alert(`${session}을 선택하셨습니다)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let studentScore = {
+        kor: 80,
+        eng: 90,
+        seien: 60,
+        math: 100,
+      };
+      console.log(studentScore.kor);
+      console.log(studentScore["kor"]);
+
+      let increment = 10;
+      console.log(increment);
+      increment++;
+      console.log(increment); //11
+      increment++;
+      console.log(increment); //12
+      let num = 10;
+      let subnum = ++num;
+      console.log(subnum);
+      let num1 = 10;
+      let subnum1 = num1++;
+      console.log(subnum1);
+
+      let x = 10;
+      x *= 5;
+      console.log(x);
+    </script>
+  </body>
+</html>

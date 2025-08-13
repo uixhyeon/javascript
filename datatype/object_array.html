@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object</title>
+  </head>
+  <body>
+    <script>
+      let koreanScore = 80;
+      let eng = 70;
+      let math = 90;
+      let science = 60;
+
+      let studentScore = [80, 70, 90, 60]; //국 0 영 1 수 2 과 2
+      console.log(studentScore[0]);
+
+      let fruts = ["apple", "banana", "orange", "mango", "grapes"];
+      console.log(fruts);
+      document.write(`그건   ${fruts[3]}`);
+      //space 1대만되넹
+      console.log(fruts[0]);
+      console.log(fruts[1]);
+      console.log(fruts[2]);
+      console.log(fruts[3]);
+      console.log(fruts[4]);
+      console.log(fruts.length);
+
+      //객체를 사용한 변수
+      let person = {
+        name: "정현영",
+        age: 20,
+        isStudent: false,
+      };
+      console.log(person.name);
+      console.log(person);
+
+      //여러명의 객체를 접근하는 방법
+      let persons = [
+       
+        {
+        name: "s",
+        age: 20,
+        isStudent: false,
+      },
+        {
+        name: "s",
+        age: 20,
+        isStudent: false,
+      },
+        {
+        name: "s",
+        age: 20,
+        isStudent: false,
+      },
+        {
+        name: "s",
+        age: 20,
+        isStudent: false,
+      }
+       ];
+      console.log(persons);
+    </script>
+  </body>
+</html>

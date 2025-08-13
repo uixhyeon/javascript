@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문으로 날씨 확인하기</title>
+  </head>
+  <body>
+    <h3>오늘의 날씨를 선택하세요.</h3>
+    <label for="weatherSelect">날씨선택:</label>
+    <select name="weatherSelect" id="weatherSelect">
+      <option value="맑음">맑음</option>
+      <option value="비">비</option>
+      <option value="구름 많음">구름 많음</option>
+      <option value="눈">눈</option>
+      <option value="바람">바람</option>
+      <option value="우중충">우중충</option>
+    </select>
+    <button id="weatherBtn">날씨확인</button>
+    <h3 id="weatherMessage">
+      <!-- js출력 -->
+    </h3>
+    <script>
+      let weatherBtn = document.querySelector("#weatherBtn");
+      // console.log(weatherBtn)
+      let weatherMessage = document.querySelector("#weatherMessage");
+      let wearherSelect = document.querySelector("#wearherSelect");
+      weatherBtn.addEventListener("click", function () {
+        // console.log(weatherBtn);
+        // alert("클릭")
+        // 이 둘은 잘 들어갔는지 확인용 ok
+        const wSelectValue = weatherSelect.value;
+        // console.log(wSelectValue);
+        // 확인용 ok
+        if (wSelectValue === "맑음") {
+          weatherMessage.textContent = "오늘은 맑은날 날씨가 좋아요";
+        } else if (wSelectValue === "비") {
+          weatherMessage.textContent = "오늘은 비옵니다. 우산 챙겨요";
+        } else if (wSelectValue === "구름 많음") {
+          weatherMessage.textContent = "오늘은 구름이 많아요";
+        } else if (wSelectValue === "눈") {
+          weatherMessage.textContent = "오늘은 눈이 옵니다. 우산 챙겨요";
+        } else if (wSelectValue === "바람") {
+          weatherMessage.textContent = "오늘은 바람이 불어요";
+        } else {
+          weatherMessage.textContent = "기타 날씨입니다.";
+        }
+      });
+    </script>
+  </body>
+</html>

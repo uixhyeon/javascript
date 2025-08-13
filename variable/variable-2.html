@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>변수연산</title>
+    <style>
+      span {
+        color: brown;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      x와 y를 더한 금액은 <span> ${total1}</span>, <br />
+      x와 y를 곱한 금액은 <span> ${total2}</span>
+    </p>
+
+    <script>
+      //변수연산
+      let x = 10;
+      let y = 20;
+      let total1 = x + y;
+      console.log(total1);
+      let total2 = x * y;
+      console.log(total2);
+      document.write(
+        `x와 y를 더한 금액은 <span> ${total1}</span>,
+        <br> x와 y를 곱한 금액은 <span> ${total2}</span>`
+      );
+      //변수로 이름을 저장
+      let name = "정현영";
+      document.write(`<h1>${name}</h1>`);
+      let mee = "hi im  ";
+      document.write(`<h2>${mee} ${name}</h2>`);
+    </script>
+  </body>
+</html>
