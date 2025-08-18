@@ -39,15 +39,34 @@
       // 이건 잘못된거. 왜 그럴까
       // menus.addEventListener("click", function () {
       //   menus.classlist.add("active");  });
-      menus.forEach(function (menu, index) {
-        console.log(menu);
-        menu.addEventListener("click", function () {
+      
+      // menus.forEach(function (menu, index) {
+      //   console.log(menu);
+      //   menu.addEventListener("click", function () {
+
+
+          // menu.classList.toggle("active");
+          //  토글을 지우는건 내일 추가로 할 예정
+
+          // 에드 리무브 하기.> 액티브가 된지 확인하고 에드 리무브
           // menu.classList.add("active");
-          // 여기에 리무브 하거나 나는 토글을 할 것이다
-          menu.classList.toggle("active");
-          //  토글을 지우는건 내일 할 것이다
-        });
+        
+        // });
+
+
+         menus.forEach(function (menu, index) {
+  // console.log(menu);
+  // 컨테인즈 확인해라??
+    menu.addEventListener("click", function(){
+  if(menu.classList.contains("active")){
+       menu.classList.remove("active")
+      }
+else{
+  menu.classList.add("active")
+}
       });
+
+    })
     </script>
   </body>
 </html>

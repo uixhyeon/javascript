@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* nav{
+  display: flex;
+  인라인 블락을 써도된다.
+} */
+      .menu {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: antiquewhite;
+      }
+      /* .menu:hover{
+  background-color: black;
+  color: aliceblue;
+} */
+      .menu.active {
+        background-color: black;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="menu">홈</div>
+      <div class="menu">상품</div>
+      <div class="menu">이벤트</div>
+      <div class="menu">마이페이지</div>
+    </nav>
+
+    <script>
+      const menus = document.querySelectorAll(".menu");
+      menus.forEach(function (menu, index) {
+        console.log(menu);
+        menu.addEventListener("click", function () {
+          // click한 메뉴를 제외하고 나머지 모두 active를 제거하갯다
+          // 위에와 곂치지 않는 메뉴즈로 사용
+          // console.log(m)
+          menus.forEach(function (m) {
+            m.classList.remove("active");
+          });
+          menu.classList.add("active");
+        });
+      });
+      // menus > menu > m 같은거다 그러나 같은이름을 쓰면 안됌! 매개변수는 중복되면 안된다
+    </script>
+  </body>
+</html>
