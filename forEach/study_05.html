@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="notice">
+      <h2>공지 사항</h2>
+      <div id="noticelist">
+        <!-- js출력
+1. 여름 세일 안내   (2025-08-01) 
+-->
+      </div>
+    </div>
+    <script>
+      const notice = [
+        { title: "여름 세일 안내", date: "2025-08-01" },
+        { title: "신규 회원 혜택 이벤트", date: "2025-08-10" },
+        { title: "배송 지연 안내", date: "2025-08-15" },
+        { title: "시스템 점검 공지", date: "2025-08-20" },
+      ];
+      // 1. 공지사항에 forEatch한다
+      //  notice.forEach(function (event, index) {
+      //     console.log(event);
+      //     document.write(`
+      //         ---<br>${event.title} <br>일시:${event.date} <br>
+      //         `);
+      //   });
+      //   화면 노티스에 찍으려면
+      const noticeList = document.querySelector("#noticelist");
+      // console.log(notice,index);
+      notice.forEach(function (event, index) {
+        // 반복되며 추가된다 디호 += 이다.
+        noticeList.innerHTML += `
+             ${index + 1}. ${event.title} (${event.date}) <br>
+              `;
+        //   어디서 어떤게 같은 명이 되어야하는지 기억하기
+        // notice 가 아니라 내가 다시 설정한 event를 가져와야 한다.
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 사람정보를 객체로 배열에 담기
+      const peoples = [
+        {
+          name: "민수",
+          age: 20,
+          city: "서울",
+        },
+        // 키는 바꿀 수 있다. 벨류는 바꿀 수 없다
+        // 오류의 원인을 잘 파악하는게 중요
+        {
+          name: "영희",
+          age: 22,
+          city: "부산",
+        },
+        {
+          name: "철수",
+          age: 21,
+          city: "대구",
+        },
+      ];
+      // foreatch()로 배열에 있는 사람정보를 순더재로 꺼네서 출력
+      // object하고 이 표가 뜨거나 ~중괄호로 바로떠도된다
+      peoples.forEach(function (people, index) {
+        console.log(people);
+        document.write(`
+            이름:${people.name} ,나이:${people.age} , 도시:${people.city}<br>
+            
+            `);
+      });
+    //   더미데이터를 활용 코드를 재사용 하기위해.. 안에것만 수정해거 사용
+    </script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* nav{
+  display: flex;
+  인라인 블락을 써도된다.
+} */
+      .menu {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: antiquewhite;
+      }
+      /* .menu:hover{
+  background-color: black;
+  color: aliceblue;
+} */
+      .menu.active {
+        background-color: black;
+        color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="menu">홈</div>
+      <div class="menu">상품</div>
+      <div class="menu">이벤트</div>
+      <div class="menu">마이페이지</div>
+    </nav>
+    <script>
+      const menus = document.querySelectorAll(".menu");
+      // 메뉴가 한개가 아니라서 쿼리셀렉터가 아니라 쿼리셀렉터올 로 한다
+      console.log(menus);
+
+      // 이건 잘못된거. 왜 그럴까
+      // menus.addEventListener("click", function () {
+      //   menus.classlist.add("active");  });
+      menus.forEach(function (menu, index) {
+        console.log(menu);
+        menu.addEventListener("click", function () {
+          // menu.classList.add("active");
+          // 여기에 리무브 하거나 나는 토글을 할 것이다
+          menu.classList.toggle("active");
+          //  토글을 지우는건 내일 할 것이다
+        });
+      });
+    </script>
+  </body>
+</html>
