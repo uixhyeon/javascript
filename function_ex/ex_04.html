@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const prices = [1000, 2000, 3000];
+     const names = ["영희", "철수", "민수"]; //1
+
+
+      function showPrice(won) {
+        console.log(`${won}원 > ${won + 0.1 * won}원(세금 포함)`);
+         names.forEach(nameImoge); //2
+      }
+      prices.forEach(showPrice);
+
+      //-------
+ 
+
+      //   names.forEach(function (name) {
+      //     console.log(`^^ ${name}님 반가워요`);
+      //   });
+
+      function nameImoge(name) {
+        console.log(`^0^ ${name}님 반가워요`);
+      } //3
+
+      //1-2-3 순서만 맞으면 어디에 있던 비슷하다
+     
+    </script>
+  </body>
+</html>

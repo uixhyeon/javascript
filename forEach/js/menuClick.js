@@ -1,25 +1,25 @@
 window.addEventListener("load", function () {
   const menu = this.document.querySelector(".menu");
   const submenus = this.document.querySelectorAll(".submenu");
-//  비지를 담아보자
-const hBg = this.document.querySelector(".header_bg")
-  menu.addEventListener("mouseenter", function () {
+  //  비지를 담아보자
+  const hBg = this.document.querySelector(".header_bg");
+  menu.addEventListener("click", function () {
     // alert("마우스엔터");
     //  확인완료
     console.log(submenus);
-    // 코드가 mouseenter안에 있다
+    // 코드가 click안에 있다
     submenus.forEach(function (sub) {
       console.log(sub);
       //   확인완
       sub.classList.add("active");
     });
-    hBg.classList.add("open")
+    hBg.classList.add("open");
   });
-  menu.addEventListener("mouseenter", function () {
+  menu.addEventListener("click", function () {
     // alert("마우스엔터");
     //  확인완료
     console.log(submenus);
-    // 코드가 mouseenter안에 있다
+    // 코드가 click안에 있다
     submenus.forEach(function (sub) {
       console.log(sub);
       //   확인완
@@ -37,7 +37,6 @@ const hBg = this.document.querySelector(".header_bg")
       //   확인완
       sub.classList.remove("active");
     });
-      hBg.classList.remove("open")
+    hBg.classList.remove("open");
   });
-
 });
