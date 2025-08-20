@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+.product{
+    border: 1px solid #ccc;
+    margin: 5px;
+    padding: 10px;
+}
+
+
+    </style>
+  </head>
+  <body>
+    <h1>상품목록🥪</h1>
+    <div id="product-list">
+      <!-- js출력 -->
+    </div>
+    <script>
+      const products = [
+        { name: "노트북", price: 1200000 },
+        { name: "스마트폰", price: 900000 },
+        { name: "이어폰", price: 200000 },
+      ];
+      function showProducts() {
+        // console.log("확인")
+        // 확인완
+        products.forEach((item) => {
+          // console.log(item)
+          // 확인완
+          const productlist = document.querySelector("#product-list");
+          productlist.innerHTML += `
+     <div class="products">
+<h3>${item.name}</h3>
+<p>${item.price.toLocaleString()}원</p>
+       </div>
+`;
+        });
+      }
+      // 호출이 있어야 실행이 된다
+      showProducts();
+    </script>
+  </body>
+</html>
