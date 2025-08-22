@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const person = {
+        name: "정현영",
+      };
+      //
+      console.log(person);
+      const copyPerson = person;
+      console.log(copyPerson);
+      //객체는 특별한특장때문에 재할당 가능
+      person.name = "홍길동";
+      console.log(person.name);
+      console.log(copyPerson.name);
+    </script>
+  </body>
+</html>
