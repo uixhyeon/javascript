@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: antiquewhite;
+      }
+      button {
+        margin-top: 10px;
+        margin-right: 5px;
+        padding: 6px 12px;
+        cursor: pointer;
+      }
+      .result {
+        margin-top: 8px;
+        color: blue;
+        font-weight: bold;
+      }
+      input {
+        padding: 6px;
+        width: 80%;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 1.글자 수 세기 -->
+    <div class="box">
+      <h2>1. 글자 수 세기</h2>
+      <input
+        type="text"
+        id="titleInput"
+        value="안녕하세요, UIUX디자인 수업중입니다."
+      />
+      <button onclick="checkLength()">글자 수 확인</button>
+      <p class="result" id="lengthResult">
+        <!-- js 글자수 출력 -->
+      </p>
+    </div>
+    <!-- 2. 대소문자 변환 -->
+    <div class="box">
+      <h2>대 소 변환</h2>
+      <p class="text">xxxXXX</p>
+      <button onclick="toUpper()">대</button>
+      <button onclick="toLower()">소</button>
+    </div>
+    <!--3 특정단어세기 -->
+    <div class="box">
+      <h2>특정단어 검생</h2>
+      <button onclick="searchWord()">javascript 포함여부</button>
+      <p class="content">오늘은 javascript 를 공부</p>
+      <p class="ruselt" id="searchResult"></p>
+    </div>
+    <!--4 글자 바꾸기 -->
+    <div class="box">
+      <h2>글자수 바꾸기</h2>
+      <p id="replaceText">hi hompage</p>
+      <button onclick="replaceText()"> hompage > webpage</button>
+    </div>
+
+    <script>
+            //1.글자 수 세기
+            function checkLength() {
+              let title = document.querySelector("#titleInput").value;
+              console.log(title);
+              const lengthResult = document.querySelector("#lengthResult");
+              // lengthResult.innerText = ` 입력된 글자수 : ${title} `
+              lengthResult.innerText = ` 입력된 글자수 : ${title.length}개 `;
+            }
+            //2. 대문자 변환
+            function toUpper(){
+      const text = document.querySelector("#text")
+      text.innerText = text.innerText.toUpperCase()
+            }
+            //2. 소문자 변환
+            function toLower(){
+      const text = document.querySelector("#text")
+      text.innerText = text.innerText.toLowerCase()
+            }
+            //3특정단어검색
+            function searchWord(){
+              const  content = document.querySelector("#content").innerText
+      console.log(content)
+      const result =document.querySelector(#searchResult)
+      if(content.includes("javascript")){
+      result.innerText = "있어요"
+
+      }else{
+      result.innerText ="업음요"
+      }
+            }
+            //4. 글자 바꾸기
+function replaceText(){
+    const el =document.querySelector("#replaceText")
+el.innerText = el.innerText.replace("hompage" , "webpage")
+
+
+}
+
+    </script>
+  </body>
+</html>
