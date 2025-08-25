@@ -30,22 +30,57 @@
       rel="icon"
       type="image/png"
       href="images/icon/favicon-96x96.png"
-      sizes="96x96" />
+      sizes="96x96"
+    />
     <link rel="icon" type="image/svg+xml" href="images/icon/favicon.svg" />
     <link rel="shortcut icon" href="images/icon/favicon.ico" />
     <link
       rel="apple-touch-icon"
       sizes="180x180"
-      href="images/icon/apple-touch-icon.png" />
+      href="images/icon/apple-touch-icon.png"
+    />
     <link rel="manifest" href="images/icon/site.webmanifest" />
     <!-- css -->
     <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/modal.css" />
     <!-- js -->
-     <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
   </head>
   <body>
     <!-- 전체 레이아웃 -->
     <div class="wrap">
+      <!-- 모달창 -->
+      <div class="modal-wrap">
+        <div class="modal-main">
+          <span class="modal-logo"></span>
+          <p class="modal-notice">
+            해당 사이트는 <strong>스터디용</strong>으로 제작되었으며,<br />
+            리소스는 <strong>원저작자</strong>에게 있음을 알려드립니다.<br />
+            문제사항이 있을 시 연락주시면 빠른 시일 내 조치하겠습니다.<br />
+            <span>본 사이트는 Chrome 에 최적화되어 있습니다.</span>
+            포폴의 변경사항을 여기다 적기.
+          </p>
+          <!-- 모달 창 닫기 -->
+          <div class="modal-close">
+            확인했습니다.
+            <i>(click 하여 닫기)</i>
+          </div>
+        </div>
+      </div>
+
+      <!-- 퀵메뉴 -->
+      <div class="fix-menu-wrap">
+        <a href="#" class="chat-btn">
+          <img src="images/chat-btn.png" alt="chat" />
+          <span>무엇을도와드릴까요?</span>
+        </a>
+        <a href="#" class="shop-btn">STX</a>
+        <a href="#" class="top-btn">
+          <img src="images/top-btn.png" class="top img btn" />
+        </a>
+      </div>
+
       <!-- 상단 -->
       <header class="header">
         <div class="header-bg"></div>
@@ -140,11 +175,13 @@
           <span class="visual-txt"
             >세계최고를 향해 STX건설이 힘차게 질주합니다!</span
           >
-          <button class="visual-btn"><a href="#bb">버튼</a></button>
+          <a href="#cs">
+            <button class="visual-btn">버튼</button>
+          </a>
         </div>
       </section>
       <!-- 비즈니스 -->
-      <section class="business">
+      <section class="business" id="business">
         <div class="business-inner container">
           <!-- 비즈니스 상단 -->
           <div class="business-top">
@@ -328,5 +365,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/modal.js" ></script>
   </body>
 </html>
