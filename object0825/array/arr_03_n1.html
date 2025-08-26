@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>상품 리스트</h1>
+    <!-- 상품 출력 -->
+    <div id="product-list">
+      <!-- js 출력 -->
+    </div>
+
+    <h2>filter() :10만원 이상 상품만 출력</h2>
+    <div id="expensive-list">
+      <!-- js출력 -->
+    </div>
+
+    <script>
+      const products = [
+        { id: 1, name: "노트북", price: 1200000 },
+        { id: 2, name: "마우스", price: 25000 },
+        { id: 3, name: "키보드", price: 55000 },
+        { id: 4, name: "모니터", price: 350000 },
+      ];
+      //map() 으로 상품을 html 요소 반환
+      const productHTML = products
+        .map(function (product) {
+          // console.log(product)
+          //결과값 리턴을 해줘야 출력한다
+          return;
+          `     
+            <div class="product">
+        <h2>${product.name}</h2>
+        <p>가격 : ${product.price.toLocaleString()} 원</p>
+       </div>
+`;
+        })
+        //지금까지 productHTML 에다 이것들을 넣음
+        .join("");
+      //
+      const productList = document.querySelector("#product-list");
+      productList.innerHTML = productHTML;
+      //filter: 10만원 이상 상품만 출력
+      const filterProducts = products.filter(function (p) {
+        // console.log(p)
+        return p.price >= 100000;
+      });
+      // console.log(filterProducts)
+      const expensiveList = document.querySelector("#expensive-list");
+      expensiveList.innerHTML = productHTML();
+    </script>
+  </body>
+</html>

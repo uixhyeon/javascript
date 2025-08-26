@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const arr = [1, 2, 3, 4, 5];
+      //1. map() : 각 요소에
+      console.log(
+        `map : ${arr.map((x) => {
+          console.log(x);
+        })}`
+      );
+      //2. filter() :조건을 만족하는 요소만 모아 새배열 반횐
+      // x 에 12345 가 담김
+      console.log(`filter() : ${arr.filter((x) => x > 2)}`);
+      // console.log(arr)
+      //3. find() :조건을 만족 첫번째 요소 반횐
+      console.log(`find() : ${arr.find((x) => x > 3)}`);
+      //4. indexOf() : 특정 요소 위치 반횐
+      console.log(`indexOf() : ${arr.indexOf(3)}`);
+      // console.log(arr)
+      //5. incluses() : 특정 요소 포함 여부 반환
+      console.log(`includes() : ${arr.includes(100)}`);
+      console.log(`includes() : ${arr.includes(5)}`);
+      //6. join() : 요소를 합친다
+      console.log(`join() : ${arr.join("/")}`);
+      // console.log(arr)
+      //7. forEach() :
+      // 포이치는 맵과 달리 단순 출력을 하기에 배열로 유지하며 출력
+      //맵은 배열로 가지고 있었지만 포이치는 하나하나 출력 한 것
+      //포이치를 더 잘씀 배열을 뭉텅이로쓰지는 않음
+      arr.forEach((x) => console.log(x * 4));
+      console.log(arr);
+    </script>
+  </body>
+</html>

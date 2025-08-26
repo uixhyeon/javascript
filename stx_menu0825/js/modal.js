@@ -77,4 +77,4 @@ window.addEventListener("load", function () {
 // }
 // })
 // });
-//괄호가 잘못됌
+// 괄호가 잘못됌

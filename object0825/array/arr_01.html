@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const arr = [1, 2, 3, 4, 5]
+// console.log(arr)
+//1. length 속성 >피괴는X 그러나 매서드가 아니라 속성이다
+console.log(`length : ${arr.length}`)
+//2. push() 배열끝에 요소를 추가 > 파괴적
+arr.push(6)
+console.log(`push() : ${arr}`)
+//3. pap() :배열 맨끝  요소 1을 제거 > 파괴적
+arr.pop()
+console.log(`pop() : ${arr}`)
+//4. shitr() :배열 첫 요소 제거 > 파괴적
+arr.shift()
+console.log(`shift() : ${arr}`)
+//5. unshift() :배열 맨 앞 요소를 추가 > 파괴적
+arr.unshift(100)
+console.log(`unshift() : ${arr}`)
+//이건 비파괴적 indexOf
+//6. indwxOf() : 요소의 위치를 반환 > 비파괴적
+//배열안의 숫자 3의 인덱스번호 반환 -2
+console.log(`indexOf 3 : ${arr.indexOf(3)}`)
+//배열안의 숫자 100의 인덱스번호 반환 -0
+console.log(`indexOf 100 : ${arr.indexOf(100)}`)
+//7. slice() : 배열 일부 반환 > 비파괴적
+arr.slice(1,4) // 2, 3, 4
+//시작을 0이 아니라 1로 끝은 4번째... 그래서 5를 제거  인덱스 번호를 적음 
+console.log(`slice() : ${arr.indexOf(100)}`)
+//8. splice() : 배열 일부를 삭제 추가 변경 > 파괴적
+arr.splice(2, 2, 99, 44)
+console.log(`splice() : ${arr}`) //[100, 2, 99, 44, 5]
+//9. sort() :배열 정렬
+let numArr = [40, 100, 1, 5, 25, 10]
+console.log(numArr)
+//numArr.sort() 문자열기준 정렬??
+console.log(`sort() : ${numArr.sort()}`)
+//numArr.sort() 숫자 오름차순
+console.log(`sort() : ${numArr.sort((a, b)=>a - b)}`)
+//numArr.sort() 숫자 내림차순
+// console.log(`sort() : ${numArr.sort((a, b)=>b - a)}`)
+//reverse() : 배열 순서 뒤집기
+console.log(`reverse() : ${numArr.reverse()}`)
+    </script>
+</body>
+</html>
