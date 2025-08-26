@@ -29,8 +29,17 @@
         .map(function (product) {
           // console.log(product)
           //결과값 리턴을 해줘야 출력한다
+          // return;
+          //  `
+          // 과 같이 세미콜론 ; 으로 백틱` 이 끊기면 안돼고
+          //  return` 으로 연결되어야 동작한다
+          //// //주석 변경해보기~~
+
+          // return`
+
           return;
-          `     
+          `
+   
             <div class="product">
         <h2>${product.name}</h2>
         <p>가격 : ${product.price.toLocaleString()} 원</p>
@@ -49,7 +58,7 @@
       });
       // console.log(filterProducts)
       const expensiveList = document.querySelector("#expensive-list");
-      expensiveList.innerHTML = productHTML();
+      expensiveList.innerHTML = productHTML;
     </script>
   </body>
 </html>
