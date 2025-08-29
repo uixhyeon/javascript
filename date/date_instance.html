@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+const date = new Date()
+console.log(date)
+const date1 = new Date(2025, 1, 25)
+console.log(date1)
+const date2 = new Date(2025, 7, 27, 18, 30, 50)
+//날짜 시 분 초
+console.log(date1)
+const dateFormat = `${date2.getFullYear()} - ${date2.getMonth()} - ${date2.getDate()}
+시간 : ${date2.getHours()}: ${date2.getMinutes()} :${date2.getSeconds()}`
+console.log(dateFormat)
+
+const date3 = new Date().getTime()
+console.log(date3)
+    </script>
+</body>
+</html>

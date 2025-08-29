@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>할인 계산</h1>
+    <div class="result">
+      <!-- js출력 -->
+    </div>
+
+    <script>
+      let price = 19900;
+      let sale = 0.15; //15%할인
+      console.log(1 - sale) // 0.85
+        let discountPrice = price * (1 - sale) 
+        console.log(discountPrice)
+const result = document.querySelector(".result")
+result.innerHTML = `     
+원래가격 : ${price}원<br>
+할인가격(소수점 그대로) : ${discountPrice}원<br>
+반올림 가격 : ${Math.round(discountPrice)}원<br>
+올림 가격 : ${Math.ceil(discountPrice)}원<br>
+내림 가격 : ${Math.floor(discountPrice)}원<br>
+`
+    </script>
+  </body>
+</html>

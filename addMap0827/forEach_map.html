@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //map() : 새 배열을 만들 때 주로 사여용 , 필요하면 변수에 담고 쓸수있다
+      const numbers = [1, 2, 3, 4, 5];
+      //맵은 배열을 그대로 반환
+      //포이치는 한하나 맵은 배열자체를 보여줌
+      //맵은 새로운 배열을 리턴- 결과물 반환
+      // (그 결과를 필요하면 변수에 담아 쓰는게 좋다)
+      //  변수에 담으면 재사용 가능
+      // const dubled = numbers.map(function(){})
+      // const dubled = numbers.map((n) => {console.log(n)})
+      const dubled = numbers.map((n) => {
+        return n * 2
+      });
+
+      console.log(dubled)
+      console.log(numbers)
+      //forEach() : 새 배열 반환이 안됌, 배열을 돌려서 바로 출력
+      numbers.forEach((n) => {
+        console.log(n)
+      })
+    </script>
+  </body>
+</html>

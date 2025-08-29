@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        /* 왼만하면 가로스크롤은 없게끔 */
+        width: 2500px;
+        height: 5000px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="printInfo()">window 객체 속성</button>
+    <script>
+      function printInfo() {
+        console.log(` 웹브라우저의 너비(innerWidth) : ${window.innerWidth}`);
+        console.log(` 웹브라우저의 높이(innerhidth) : ${window.innerHeight}`);
+        console.log(
+          ` 웹브라우저의 창의 너비(outerWidth) : ${window.outerWidth}`);
+        console.log(
+          ` 웹브라우저의 창의 너비(outerHidth) : ${window.outerHidth}`);
+        console.log(
+          `웹 브라우저 창 위쪽 면과 모니터 사이의 간격(screenTop,screenY): ${window.screenTop}/${window.screenY}` );
+        console.log(
+          `웹 브라우저 창 왼쪽 면과 모니터 사이의 간격(screenLeft,screenX): ${window.screenLeft}/${window.screenX}` );
+      
+        console.log(
+          `웹 (scrollX): ${window.scrollX}` );
+      
+        }
+    </script>
+  </body>
+</html>
