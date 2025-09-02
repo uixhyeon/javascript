@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="https://www.naver.com/">네이버</a>
+    <script>
+        const aEl = document.querySelector("a")
+        console.log(aEl)
+// getAttribute() 속성값을 가져와라
+const href = aEl.getAttribute("href")
+console.log(href)
+// getAttribute() 속성값을 셋한다 //주소값을 설정함
+        aEl.setAttribute("href" , "https://www.google.com/")
+aEl.innerText ="구글"
+//target => _blank
+aEl.setAttribute("target", "_blank")
+aEl.setAttribute("title", "goGoogle")
+</script>
+</body>
+</html>
