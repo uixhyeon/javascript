@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 요소노드 생성
+        const aEl = document.createElement("a")
+        console.log(aEl)
+        document.body.appendChild(aEl)
+        //텍스트 노드 추가하기
+        const txtEl = document.createTextNode("naver")
+        console.log(txtEl)
+        document.querySelector("a").appendChild(txtEl)
+        const hrefAttr = document.createAttribute("href")
+        console.log(hrefAttr)
+        //값은 value
+        hrefAttr.value = "https://www.naver.com"
+document.querySelector("a").setAttributeNode(hrefAttr) //이게 없으면 a의 속성이 없는 상태
+
+
+    </script>
+</body>
+</html>

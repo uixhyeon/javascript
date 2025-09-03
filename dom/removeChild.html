@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>text1</p>
+    <a href="https://www.gilbut.co.kr">길벗</a>
+  <a href="https://www.sucoding.kr">수코딩</a>
+  <script>
+    //자식노드 지운거 삭제
+// const pEl =document.querySelector("p")
+// pEl.parentNode.removeChild(pEl)
+//전체 삭제
+const childNodes = document.body.childNodes
+console.log(childNodes)
+//노드리스트는 배열상태 > 포이치 돌려야함
+childNodes.forEach((node)=>{
+console.log(node)
+node.parentNode.removeChild(node) //뭔기 안됐음
+// if(node.nodeNAme === "A"){
+//     node.parentNode.removeChild(node)
+// }
+})
+  </script>
+</body>
+</html>
